@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Pizza, Size
+from .models import Pizza
 
 # class PizzaForm(forms.Form):
 #     topping1 = forms.CharField(label='Topping 1', max_length=100, widget=forms.Textarea)
@@ -21,11 +21,13 @@ from .models import Pizza, Size
 
 class PizzaForm(forms.ModelForm):
 
-    size = forms.ModelChoiceField(
-        queryset=Size.objects,
-        empty_label=None,
-        widget=forms.RadioSelect
-        )
+    # size = forms.ModelChoiceField(
+    #     queryset=Size.objects,
+    #     empty_label=None,
+    #     widget=forms.RadioSelect
+    #     )
+
+    # image = forms.ImageField()
 
     class Meta:
         model = Pizza
