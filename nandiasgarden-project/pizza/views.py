@@ -13,7 +13,6 @@ def order(request):
     multiple_form = MultiplePizzaForm()
 
     if request.method == 'POST':
-        # filled_form = PizzaForm(request.POST, request.FILES)
         filled_form = PizzaForm(request.POST)
 
         if filled_form.is_valid():
